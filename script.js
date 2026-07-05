@@ -1,34 +1,25 @@
-var nombre;
-nombre = prompt('Dime tu nombre ', '');
-alert("Saludos " + nombre + ", lee las instrucciones de la pagina");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Días de la Semana</title>
 
-function meses ()
-{
-    var meses = ["enero", "febrero", "marzo", "abril", "mayo", 
-    "junio", "julio", "agosto",  "septiembre", "octubre", 
-    "noviembre", "diciembre"];
-    var i;
+    <script>
+        function diasSemana() {
+            var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
-    for(i=0;i<=11;i++)
-    {
-        document.write('<br>');
-        document.write("mes " + (i+1) + ": "+meses[i]);
-    }
-    document.write('<br>');
-    document.write('<br>');
-    document.write("para volver a iniciar las funciones recarga la pagina");
-}
+            for (var i = 0; i < dias.length; i++) {
+                document.write("Día " + (i + 1) + ": " + dias[i] + "<br>");
+            }
 
-function tablaMulti (numero)
-{
-    var j;
+            document.write("<br>Para volver a iniciar, recarga la página.");
+        }
+    </script>
+</head>
 
-    for(j=1;j<=10;j++)
-    {
-        document.write('<br>');
-        document.write(numero + " x " + j + " = "+ numero*j);
-    }
-    document.write('<br>');
-    document.write('<br>');
-    document.write("para volver a iniciar las funciones recarga la pagina")
-}
+<body>
+
+    <button onclick="diasSemana()">Mostrar los 7 días de la semana</button>
+
+</body>
+</html>
